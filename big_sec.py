@@ -1,7 +1,6 @@
 import random
 
 # print("------------Encoding-------------")
-# msg = input("Enter your message to encode/decode: ")
 
 def s_enc(msg):
         y, w = [], []
@@ -9,8 +8,6 @@ def s_enc(msg):
         alp= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*&%$#@!"
         if len(l_msg)<3:
             y = l_msg[::-1]
-            # print(y)
-            # print("\nEncoded message: ")
             for el in y:
                 print(el, end="")
             return ("")
@@ -22,7 +19,6 @@ def s_enc(msg):
                 l_msg.append(random.choice(alp))
                 l_msg.insert(i, random.choice(alp))
             w = l_msg
-            # print("\nEncoded message: ")
             for el in w:
                 print(el, end="")
             return ("")
@@ -32,20 +28,18 @@ def b_enc(msg):
             print(s_enc(l1[k]), end=" ")
 
 # print("------------Decoding-------------")
+
 def s_dec(msg):
 
-    # msg = input("Enter your message to decode: ")
     l_msg = [x for x in msg]
     if len(l_msg)<3 and len(l_msg)!=0:
         z = l_msg[::-1]
-        # print("\nDecoded message: ")
         for el1 in z:
             print(el1, end="")
         return ""
 
     if len(l_msg)>3:
         b_g, b_h, b_i = l_msg[0], l_msg[1], l_msg[2]
-        # print(b_g, b_h, b_i)
         l_msg.remove(b_g)
         l_msg.remove(b_h)
         l_msg.remove(b_i)
@@ -54,7 +48,6 @@ def s_dec(msg):
         a = l_msg[-1]
         l_msg.pop(-1)
         l_msg.insert(0, a)
-        # print("\nDecoded message: ")
         for el1 in l_msg:
             print(el1, end="")
         return ""
