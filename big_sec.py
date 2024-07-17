@@ -1,3 +1,8 @@
+"""
+This is a basic encryption-based project,
+where User input is encrypted/decrypted
+using some set of rules.
+"""
 import random
 
 # print("------------Encoding-------------")
@@ -23,6 +28,7 @@ def s_enc(msg):
                 print(el, end="")
             return ("")
 def b_enc(msg):
+        
         l1 = msg.split()
         for k in range(len(l1)):
             print(s_enc(l1[k]), end=" ")
@@ -51,6 +57,7 @@ def s_dec(msg):
         for el1 in l_msg:
             print(el1, end="")
         return ""
+    
 def b_dec(msg):
      l2 = msg.split()
      for k1 in range(len(l2)):
